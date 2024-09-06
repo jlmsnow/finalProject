@@ -1,0 +1,35 @@
+---
+title: "Final Assignment - Creating an HTML document using R Markdown"
+author: "L.J"
+date: "`r format(Sys.Date(), '%A, %B, %d, %Y')`"
+output: 
+  html_document:
+    theme: cerulean
+    highlight: espresso
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary
+This is an R Markdown document I created for the final assignment of the course *Reproducible Templates for Analysis and Dissemination*. 
+It includes a plot of the built-in "pressure" dataset and a table of the built-in "cars" dataset. 
+Thank you for reviewing my work!
+
+* The theme of this document is *Cerulean*
+
+* Plot of pressure
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+* Table of the top 6 rows of cars data
+
+```{r carstab, echo=FALSE}
+knitr::kable(head(cars),
+             caption = "Top 6 rows of the dataset cars")
+
+```
+
